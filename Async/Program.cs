@@ -14,14 +14,14 @@ class Program
         Stopwatch stopSync = Stopwatch.StartNew();
         ArraySynс(array);
         stopSync.Stop();
-        Console.WriteLine($"Синхронный метод заполнения занял {stopSync.ElapsedMilliseconds} миллисекунд.");
-        PrintArray(array); // Вывод массива после заполнения синхронным методом
+        Console.WriteLine($"Статический метод заполнения занял {stopSync.ElapsedMilliseconds} миллисекунд.");
+        PrintArray(array); 
 
         Stopwatch stopAsync = Stopwatch.StartNew();
         await ArrayAsync(array);
         stopAsync.Stop();
         Console.WriteLine($"Асинхронный метод заполнения занял {stopAsync.ElapsedMilliseconds} миллисекунд.");
-        PrintArray(array); // Вывод массива после заполнения асинхронным методом
+        PrintArray(array);
 
         goto meow;
     }
